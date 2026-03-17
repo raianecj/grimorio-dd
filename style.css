@@ -1,0 +1,197 @@
+body {
+    background: #1a1a1a;
+    font-family: "Cinzel", serif;
+}
+
+/* PAGE */
+.page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* CARD BASE */
+.card {
+    width: 7cm;
+    height: 10cm;
+    margin: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    border-radius: 14px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(145deg, #f8f5ec, #e8dccb);
+    border: 2px solid #3a2f1b;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.6),
+        inset 0 0 10px rgba(0, 0, 0, 0.2);
+
+    overflow: hidden;
+}
+
+/* ORNAMENTO INTERNO */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+/* ÍCONE */
+.icon {
+    font-size: 20px;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
+}
+
+/* TÍTULO */
+.title {
+    font-family: "Uncial Antiqua", cursive;
+    font-size: 15px;
+    text-align: right;
+    letter-spacing: 1px;
+    color: #2c1b0f;
+}
+
+/* SUBTITLE */
+.subtitle {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    color: #5a4632;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 2px;
+}
+
+/* INFO */
+.info {
+    font-size: 9px;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-family: "Georgia", serif;
+}
+
+/* DESCRIPTION */
+.description {
+    font-size: 9px;
+    line-height: 1.25;
+    text-align: justify;
+    flex-grow: 1;
+    font-family: "Georgia", serif;
+}
+
+/* CLASSE TÍTULO */
+.class-title {
+    width: 100%;
+    font-family: "Uncial Antiqua", cursive;
+    font-size: 26px;
+    color: #e8dccb;
+    margin: 30px 0 10px;
+    text-align: center;
+    border-bottom: 2px solid #6b5a3a;
+    padding-bottom: 6px;
+}
+
+/* SEÇÃO */
+.class-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* 🎨 CORES POR ESCOLA (COM MAIS PROFUNDIDADE) */
+
+.evocation {
+    border-color: #922b21;
+    background: linear-gradient(145deg, #fcebea, #f5b7b1);
+}
+
+.necromancy {
+    border-color: #4a235a;
+    background: linear-gradient(145deg, #f4ecf7, #d7bde2);
+}
+
+.abjuration {
+    border-color: #1f618d;
+    background: linear-gradient(145deg, #eaf2f8, #aed6f1);
+}
+
+.conjuration {
+    border-color: #196f3d;
+    background: linear-gradient(145deg, #eafaf1, #a9dfbf);
+}
+
+.illusion {
+    border-color: #a93226;
+    background: linear-gradient(145deg, #fdecea, #f5b7b1);
+}
+
+.transmutation {
+    border-color: #b7950b;
+    background: linear-gradient(145deg, #fef9e7, #f9e79f);
+}
+
+.enchantment {
+    border-color: #7d3c98;
+    background: linear-gradient(145deg, #f5eef8, #d2b4de);
+}
+
+.divination {
+    border-color: #9a7d0a;
+    background: linear-gradient(145deg, #fcf3cf, #f7dc6f);
+}
+
+/* ✨ EFEITO HOVER (útil antes de imprimir) */
+.card:hover {
+    transform: scale(1.03);
+    transition: 0.2s;
+}
+
+.filters {
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+}
+
+.filters select {
+    padding: 6px;
+    margin: 4px;
+    font-family: "Cinzel", serif;
+    background: #e8dccb;
+    border: 1px solid #3a2f1b;
+}
+
+/* 🖨 IMPRESSÃO */
+@media print {
+    body {
+        background: white;
+    }
+
+    .card {
+        box-shadow: none;
+        margin: 4px;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+}
+@page {
+    size: A4;
+    margin: 5mm;
+}
